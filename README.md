@@ -5,10 +5,12 @@
 This project is a comprehensive system for managing and analyzing offender data for the Chicago Police Department, specifically focusing on the Rogers Park and Lincoln Park areas. The project involves data collection, pre-processing, cleansing, and visualization using various technologies, including Flask, SQLAlchemy, Airflow, Google BigQuery, and Looker Studio.
 
 ## Problem Statement
+![image](https://github.com/user-attachments/assets/88fe9a0a-65eb-4dd5-8718-1f093eb2315d)
 
 The Chicago Police Department requires an efficient system to manage and analyze offender data from different precincts, specifically Rogers Park and Lincoln Park. The goal is to streamline the booking process, ensure data consistency, and derive actionable insights to improve law enforcement strategies and resource allocation.
 
 ## Project Structure
+![image](https://github.com/user-attachments/assets/4dd0b963-67ec-4d99-8509-757e15ef1c7d)
 
 - **Flask Application**: Provides a web interface for booking offenders.
 - **SQLAlchemy Models**: Defines the database schema and ORM models.
@@ -53,6 +55,9 @@ The Chicago Police Department requires an efficient system to manage and analyze
 - Another DAG defined in `dags/extract_courts.py` extracts table metadata from SQL Server and loads it into Google BigQuery.
 - The data is further processed to derive insights and metrics.
 
+### Database Models
+![image](https://github.com/user-attachments/assets/109efb37-ecd1-41a6-a586-f5230e5cc407)
+
 ### SQL Scripts for Insights
 
 - **All Offenses Base**: `01_all_offenses_base.sql` creates a base table for all offenses.
@@ -61,6 +66,7 @@ The Chicago Police Department requires an efficient system to manage and analyze
 ## Dashboard Creation
 
 ### Looker Studio
+![Screenshot 2025-02-20 at 4 14 39 PM](https://github.com/user-attachments/assets/10c43f4a-5ac8-42e6-8511-dcab043dc0ca)
 
 - The cleansed and processed data in Google BigQuery is visualized using Looker Studio.
 - The dashboard provides insights into offender data, including the number of offenses, top offenders, and demographic information.
