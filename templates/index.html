@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Station Booking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Chicago Roger's Park Police Station Booking System</h1>
+        <a href="{{ url_for('book_offender') }}" class="btn">Book an Offender from this Area</a>
+    </div>
+    <div class="container">
+        <h1>Welcome to the Chicago Lincoln Park Police Station Booking System</h1>
+        <a href="{{ url_for('book_offender_lincoln_park') }}" class="btn">Book an Offender from this Area</a>
+    </div>
+    <div class="container">
+        <iframe width="800" height="650" src="https://lookerstudio.google.com/embed/reporting/5d8dcf55-0f29-4648-afc1-359d7e7ac6bc/page/hDLZE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+</body>
+</html>

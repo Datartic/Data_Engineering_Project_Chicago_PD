@@ -1,0 +1,5 @@
+# Ignore virtual environment directory
+venv/
+logs/*
+google_creds/*
+.DS_Store

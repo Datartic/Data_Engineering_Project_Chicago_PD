@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Offender in Roger's Park</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Offender in Roger's Park</h1>
+        <form action="{{ url_for('book_offender') }}" method="POST">
+            <!-- Offender Details -->
+            <label for="name">Offender Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="phone">SSN:</label>
+            <input type="text" id="ssn" name="ssn" required>
+
+            <!-- New Fields for Race, Sex, and Ethnicity -->
+            <label for="race">Race:</label>
+            <select id="race" name="race" required>
+                <option value="">Select Race</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Asian">Asian</option>
+                <option value="Hispanic">Hispanic</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select Sex</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="ethnicity">Ethnicity:</label>
+            <select id="ethnicity" name="ethnicity" required>
+                <option value="">Select Ethnicity</option>
+                <option value="Caucasian">Caucasian</option>
+                <option value="African American">African American</option>
+                <option value="Latino">Latino</option>
+                <option value="Asian American">Asian American</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Native American">Native American</option>
+                <option value="Pacific Islander">Pacific Islander</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <h3>Offenses</h3>
+            {% for offense in offenses %}
+                <label>
+                    <input type="checkbox" name="offenses" value="{{ offense.id }}">
+                    {{ offense.code }} - {{ offense.description }}
+                </label><br>
+            {% endfor %}
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+    </div>
+</body>
+</html>
